@@ -1,12 +1,8 @@
 pipeline {
     agent any
-
     options {
-        disableConcurrentBuilds()
-        timeout(time: 2, unit: 'HOURS')
         timestamps()
     }
-    
     stages {
         stage('checkout') {
             steps {
