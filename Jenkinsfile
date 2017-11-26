@@ -5,6 +5,8 @@ pipeline {
             steps {
                 dir('${repo_dir}') {
                     deleteDir()
+               }
+                dir('${repo_dir}') {
                     git url: '${repo_url}'
                }
             }
