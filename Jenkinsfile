@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
-            steps {
-                sh 'echo "I am a unicorn!"'
+        stage('checkout') {
+            dir('build-stream-tree-plugin') {
+               git url: 'https://github.com/or-shachar/build-stream-tree-plugin.git'
+            }
+        }
+        stage('echo') {
+             steps {
+                sh 'cat build-stream-tree-plugin/pom.xml'
             }
         }
     }
