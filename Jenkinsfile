@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-               dir('build-stream-tree-plugin') {
-                  git url: 'https://github.com/or-shachar/build-stream-tree-plugin.git'
+                dir('${repo_dir}') {
+                    git url: '${repo_url}'
                }
             }
         }
