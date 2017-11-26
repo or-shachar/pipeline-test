@@ -2,8 +2,10 @@ pipeline {
     agent any
     stages {
         stage('checkout') {
-            dir('build-stream-tree-plugin') {
-               git url: 'https://github.com/or-shachar/build-stream-tree-plugin.git'
+            steps {
+               dir('build-stream-tree-plugin') {
+                  git url: 'https://github.com/or-shachar/build-stream-tree-plugin.git'
+               }
             }
         }
         stage('echo') {
