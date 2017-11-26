@@ -4,7 +4,7 @@ pipeline {
         stage('checkout') {
             steps {
                 dir('${repo_dir}') {
-                    deleteDir
+                    deleteDir()
                     git url: '${repo_url}'
                }
             }
