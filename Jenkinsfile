@@ -4,7 +4,7 @@ pipeline {
         stage('checkout') {
             steps {
                 dir('${repo_dir}') {
-                    git url: '${repo_url}'
+                    git '${repo_url}'
                }
             }
         }
